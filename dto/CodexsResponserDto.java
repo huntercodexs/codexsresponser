@@ -1,4 +1,4 @@
-package huntercodexs.postalcode.codexsresponser.dto;
+package codexsresponser.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

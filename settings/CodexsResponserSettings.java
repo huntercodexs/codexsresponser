@@ -1,4 +1,4 @@
-package huntercodexs.postalcode.codexsresponser.settings;
+package codexsresponser.settings;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

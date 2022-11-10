@@ -1,6 +1,6 @@
-package huntercodexs.postalcode.codexsresponser.exception;
+package codexsresponser.exception;
 
-import huntercodexs.postalcode.codexsresponser.settings.CodexsResponserSettings;
+import codexsresponser.settings.CodexsResponserSettings;
 import lombok.Getter;
 import org.springframework.http.HttpStatus;
 

@@ -1,8 +1,8 @@
-package huntercodexs.postalcode.codexsresponser.handler;
+package codexsresponser.handler;
 
-import huntercodexs.postalcode.codexsresponser.dto.CodexsResponserDto;
-import huntercodexs.postalcode.codexsresponser.exception.CodexsResponserException;
-import huntercodexs.postalcode.codexsresponser.settings.CodexsResponserSettings;
+import codexsresponser.dto.CodexsResponserDto;
+import codexsresponser.exception.CodexsResponserException;
+import codexsresponser.settings.CodexsResponserSettings;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
