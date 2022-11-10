@@ -5,6 +5,10 @@ Um pequeno espaco de trabalho para tratamento de respostas em requisições REST
 
 Este projeto é livre e pode ser usado como base para outros projetos por qualquer pessoa através da licença MIT.
 
+# Idiomas
+
+- Language: Portugues Brazil (pt-br)  |  <a href="README-EN.md">Inglês (en)</a>
+
 # Pre Requisitos
 
 - MVC Concept 

@@ -5,6 +5,10 @@ A small workspace for handling responses in REST requests
 
 This project is free and can be used as a basis for other projects by anyone under the MIT license.
 
+# Languages
+
+- Language: <a href="README.md">Portuguese Brazil (pt-br)</a> | English
+
 # Pre Requirements
 
 - MVC Concept
