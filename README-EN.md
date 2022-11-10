@@ -1,22 +1,22 @@
 # Codexs Responser Exception Rest Handler
-Um pequeno espaco de trabalho para tratamento de respostas em requisições REST
+A small workspace for handling responses in REST requests
 
-# Licença
+# License
 
-Este projeto é livre e pode ser usado como base para outros projetos por qualquer pessoa através da licença MIT.
+This project is free and can be used as a basis for other projects by anyone under the MIT license.
 
-# Pre Requisitos
+# Pre Requirements
 
-- MVC Concept 
-- Maven Project 4.0.0 
-- Spring Boot 2.0.1.RELEASE 
+- MVC Concept
+- Maven Project 4.0.0
+- Spring Boot 2.0.1.RELEASE
 - Java Version 1.8 (jdk1.8.0_212)
 
-# Como Usar
+# How to use
 
-- Depedendencias
+- Dependencies
 
-Primeiramente import para dentro do arquivo pom.xml do seu projeto as seguintes dependencias:
+First, import the following dependencies into your project's pom.xml file:
 
 <pre>
     &lt;dependency&gt;
@@ -27,10 +27,10 @@ Primeiramente import para dentro do arquivo pom.xml do seu projeto as seguintes 
     &lt;/dependency&gt;
 </pre>
 
-- Configuração
+- Settings
 
-A configuração é bem simples e é feita manualmente, para incluir esse pequeno espaço de trabalho em algum projeto siga 
-os passos abaixo:
+The configuration is very simple and is done manually, to include this small workspace in any project follow
+the steps below:
 
 <pre>
 git clone https://github.com/huntercodexs/codexsresponser.git
@@ -39,27 +39,27 @@ git checkout release
 rm -rf .git .gitignore
 </pre>
 
-Aspós realizar os procedimentos acima é preciso copiar os arquivo para dentro do projeto utilizador do espaço de trabalho 
-Codexs Responser conforme orientações a serguir:
+After performing the above procedures, it is necessary to copy the files into the user project of the workspace
+Codexs Responser according to the following guidelines:
 
-NOTA
+NOTE
 
-> É recomandável fazer isso com o auxilio de uma IDE como o IntelliJ, pois essa ferramenta é capaz de copiar todos os
-> arquivos e pastas renomeando corretamente os "packages" e referencias dentro do projeto, isso evita que ocorram falhas
-> e erros inesperados além de causar muita confusão. Você pode simplesmente arrastar a pasta inteira para dentro do seu
-> projeto no path especificado por exemplo src/main/java/com/projectname/project/config
+> It is recommended to do this with the help of an IDE such as IntelliJ, as this tool is capable of copying all the
+> files and folders correctly renaming the "packages" and references within the project, this avoids failures
+> and unexpected errors as well as causing a lot of confusion. You can just drag the entire folder into your
+> project in the specified path eg src/main/java/com/projectname/project/config
 
 ![img.png](data/midias/configure.png)
 
-O espaço de trabalho Codexs Responser ainda não esta pronto, para finalizar altere os "package names" dos arquivos que 
-compoem o Codexs Responser, sendo eles:
+The Codexs Responser workspace is not ready yet, to finish change the "package names" of the files that
+make up the Codexs Responser, which are:
 
 - CodexsResponserDto
 - CodexsResponserException
 - CodexsResponserRequestHandler
 - CodexsResponserSettings
 
-por exemplo:
+for example:
 
 <pre>
 package com.huntercodexs.postalcode.config.codexsresponser.dto; (CodexsResponserDto.class)
@@ -68,13 +68,14 @@ package com.huntercodexs.postalcode.config.codexsresponser.handler; (CodexsRespo
 package com.huntercodexs.postalcode.config.codexsresponser.settings; (CodexsResponserSettings.class)
 </pre>
 
-- Programando as respostas
+- Programming the answers
 
-Agora que ja o pequeno espaço de trabalho Codexs Responser esta configurado é preciso iniciar as alterações de códigos e 
-preparar a aplicação para interceptar excessões durante o processamento de uma requisição.
+Now that the small Codexs Responser workspace is configured, it is necessary to start the code changes and
+prepare the application to intercept exceptions during the processing of a request.
 
-Primeiro edite o arquivo CodexsResponserSettings.class conforme a necessidade definindo as mensagens e os codigos de erros 
-que o Codexs Responser devera tratar, conforme exemplo abaixo: 
+First edit the CodexsResponserSettings.class file as needed defining the messages and error codes
+that the Codexs Responser should handle, as shown in the example below:
+
 
 <pre>
 1 package com.huntercodexs.archdemo.demo.config.codexsresponser.settings;
@@ -140,25 +141,25 @@ que o Codexs Responser devera tratar, conforme exemplo abaixo:
 61 }
 </pre>
 
-Os atributo unknownErrorCode e unknownErrorMessage serão utilizados para tratar mensagens com tipos de execessões que 
-não são de conhecimento do Codexs Responser.
+The unknownErrorCode and unknownErrorMessage attributes will be used to handle messages with exception types that
+are not known to Codexs Responser.
 
-Os atributos replacementString e missingDataMessage são para tratamentos de execessões provenientes do Validation javax
-(javax.validation.Valid) que tem por finalidade extrair o campo que esta causando o erro e mostrar em uma mensagem 
-personalizada definida no atributo missingDataMessage. Sendo assim tenha cuidado em não remover esse formato de string 
-nesse attributo, embora ela possa ser personalizada, não se esqueça de inserir sempre o @{data}, seja por meio de uma 
-"variavel", seja por codigo direto.
+The replacementString and missingDataMessage attributes are for exception handling coming from Validation javax
+(javax.validation.Valid) whose purpose is to extract the field that is causing the error and show it in a message
+custom defined in the missingDataMessage attribute. So be careful not to remove this string format
+in this attribute, although it can be customized, don't forget to always insert the @{data}, either through a
+"variable", either by direct code.
 
-O enumerador codexsResponserExpectedErrors tem por finalidade gerenciar as mensagens de erro definidas em sua lista, 
-sendo que elas serão acessadas durante o uso no código fonte da aplicação utilizadora do Codexs Responser.
+The codexsResponserExpectedErrors enumerator is intended to manage the error messages defined in its list,
+and they will be accessed during use in the source code of the application using the Codexs Responser.
 
-> Simulando um uso do Codexs Responser
+> Simulating a Codexs Responser usage
 
-Para finalizar e como demonstração sera apresentado uma regra simples em um código qualquer que faz uso do 
-Codexs Responser, trata-se de um exemplo com duas possibilidades de uso e que deixa bem claro a funcionalidade 
-para as demais ocasiões.
+Finally, and as a demonstration, a simple rule will be presented in any code that makes use of the
+Codexs Responser, it is an example with two possibilities of use and that makes clear the functionality
+for other occasions.
 
-O código abaixo
+The code below
 
 <pre>
     if (result == null || result.getBody().getCep() == null) {
@@ -166,7 +167,7 @@ O código abaixo
     }
 </pre>
 
-ira produzir a seguinte resposta em uma requisição REST:
+will produce the following response in a REST request:
 
 <pre>
 Http Status 404 (JSON)
@@ -176,7 +177,7 @@ Http Status 404 (JSON)
 }
 </pre>
 
-No proximo código, temos uma situação de mensagem de erro que sobreescreve a mensagem configurado no enumerador de erros
+In the next code, we have an error message situation that overwrites the message configured in the error enumerator
 
 <pre>
     if (result == null || result.getBody().getCep() == null) {
@@ -184,7 +185,7 @@ No proximo código, temos uma situação de mensagem de erro que sobreescreve a 
     }
 </pre>
 
-a resposta em uma requisição REST será:
+the response in a REST request will be:
 
 <pre>
 Http Status 404 (JSON)
