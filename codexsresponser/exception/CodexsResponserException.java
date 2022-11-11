@@ -23,7 +23,7 @@ public class CodexsResponserException extends RuntimeException {
             String message
     ) {
         this.httpStatus = codexsResponserExpectedErrors.getStatusCode();
-        this.errorCode = codexsResponserExpectedErrors.getErrorCode();
+        this.errorCode = codexsResponserExpectedErrors.getMessage() + codexsResponserExpectedErrors.getErrorCode();
         this.message = message;
     }
 }
